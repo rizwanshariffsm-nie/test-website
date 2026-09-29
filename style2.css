@@ -1,0 +1,148 @@
+/* Shared stylesheet for the five project websites */
+:root {
+    --page-width: 1180px;
+    --space-section: 78px;
+    --text: #253746;
+    --muted: #687876;
+    --surface: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.site-header {
+    padding: 28px 7vw;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.site-nav a {
+    margin-left: 24px;
+    color: inherit;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.site-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    max-width: var(--page-width);
+    min-height: 64vh;
+    margin: auto;
+}
+
+.site-hero h1 {
+    margin: 0;
+    font: 400 clamp(44px, 7vw, 84px)/.94 Georgia, serif;
+}
+
+.site-hero p {
+    max-width: 520px;
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+.site-hero img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.site-section {
+    max-width: var(--page-width);
+    margin: auto;
+    padding: var(--space-section) 7vw;
+}
+
+.site-section h2 {
+    margin-top: 0;
+    font: 400 40px Georgia, serif;
+}
+
+.site-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.site-card {
+    padding: 28px;
+    background: var(--surface);
+    border: 1px solid rgba(37, 55, 70, .12);
+}
+
+.site-card h3 {
+    margin-top: 0;
+}
+
+.site-card p,
+.site-section li {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.site-feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.site-feature img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.site-contact {
+    text-align: center;
+}
+
+.site-contact a {
+    font-weight: bold;
+}
+
+@media (max-width: 760px) {
+    .site-nav a {
+        display: none;
+    }
+
+    .site-hero,
+    .site-feature,
+    .site-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .site-hero {
+        min-height: auto;
+        padding: 60px 0;
+    }
+
+    .site-hero img {
+        height: 300px;
+    }
+}
